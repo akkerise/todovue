@@ -26,11 +26,10 @@ export default {
   },
   methods: {
     async register () {
-      const res = await AuthenticationService.register({
+      await AuthenticationService.register({
         email: this.user.email,
         password: this.user.password
       })
-      console.log('register button was clicked', this.user.email, this.user.password)
     }
   },
   mounted () {
